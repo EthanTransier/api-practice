@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>Menu</h1>
+    
+    <div class="flexContainer">
+        <div class="sortContainer">
+            <div>
+                <h3>Sort By: </h3>
+                <select name="sort" id="sort" onchange="sort()">
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                
+                <select name="direction" id="direction" onchange="sort()">
+                    <option value="up">Ascending</option>
+                    <option value="down">Descending</option>
+                </select>
+            </div>
+            <div>
+                <h3>Find Menu Item by ID:</h3>
+                <input type="text" name="search" id="search">
+                <button onclick="search()">Search</button>
+            </div>
+            <div>
+                <h3>Filter Category: </h3>
+                <label for="breakfast">Breakfast</label>
+                <input type="checkbox" onclick="filter()" id="breakfast" name="breakfast">
+                <label for="lunch">Lunch</label>
+                <input type="checkbox" onclick="filter()" id="lunch" name="lunch">
+                <label for="shakes">Shakes</label>
+                <input type="checkbox" onclick="filter()" id="shakes" name="shakes">
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <section class="result" id="result">
+        
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
